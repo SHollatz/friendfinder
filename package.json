@@ -1,0 +1,16 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "based on the answer of 10 questions people are matched",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sabine Hollatz",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
