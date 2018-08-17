@@ -196,7 +196,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/dms/image/C5603AQHwD6aDoa_Jug/profile-displayphoto-shrink_200_200/0?e=1539820800&v=beta&t=MD1Y8C4YQjU3QU1_IZXGuZTkIdevViNSSGkFr1EsNJg" alt="Your friend!" style="width:200px; height:200px; display:block">
+                    <img id="match-img" src="" alt="Your friend!" style="max-width: 570px;">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -275,7 +275,7 @@
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                     $("#match-name").text(data.name);
-                    $("#match-img").attr("src", "https://media.licdn.com/dms/image/C5603AQHwD6aDoa_Jug/profile-displayphoto-shrink_200_200/0?e=1539820800&v=beta&t=MD1Y8C4YQjU3QU1_IZXGuZTkIdevViNSSGkFr1EsNJg");
+                    $("#match-img").attr("src", data.photo);
                     console.log(data.photo);
 
                     // Show the modal with the best match
