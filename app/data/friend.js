@@ -36,7 +36,7 @@ module.exports = [
         "photo": "https://github.com/SHollatz/friendfinder/blob/master/app/images/Hannah_alias.jpg?raw=true",
         "scores": [
             2,
-            5,
+            4,
             3,
             5,
             2,
@@ -68,9 +68,9 @@ module.exports = [
         "photo": "https://github.com/SHollatz/friendfinder/blob/master/app/images/Joaquim_alias.jpg?raw=true",
         "scores": [
             3,
-            3,
-            4,
+            2,
             5,
+            2,
             2,
             3,
             4,
@@ -85,9 +85,9 @@ module.exports = [
         "scores": [
             1,
             2,
-            4,
+            1,
             3,
-            5,
+            3,
             4,
             3,
             1,
@@ -100,14 +100,14 @@ module.exports = [
         "photo": "https://github.com/SHollatz/friendfinder/blob/master/app/images/Lila_alias.jpg?raw=true",
         "scores": [
             3,
-            3,
+            4,
             4,
             2,
             3,
             2,
+            5,
             4,
-            3,
-            3,
+            1,
             2
         ]
     },
@@ -123,7 +123,7 @@ module.exports = [
             5,
             3,
             4,
-            2,
+            5,
             4
         ]
     },
@@ -132,12 +132,12 @@ module.exports = [
         "photo": "https://github.com/SHollatz/friendfinder/blob/master/app/images/Miranda_alias.jpg?raw=true",
         "scores": [
             3,
-            3,
             1,
-            2,
+            1,
+            5,
             5,
             1,
-            2,
+            4,
             5,
             4,
             2
@@ -149,8 +149,8 @@ module.exports = [
         "scores": [
             5,
             3,
-            4,
             2,
+            4,
             3,
             1,
             1,
