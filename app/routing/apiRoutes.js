@@ -4,9 +4,14 @@ function calculateMatch(arrayDB, arrayNewUser) {
     var singleResult = 0;
     var totalResult = 0;
     for (var m = 0; m < arrayDB.length; m++) {
-        
-        singleResult = 
+        if (arrayDB[m] <= arrayNewUser[m]) {
+            singleResult = parseInt(arrayNewUser[m]) - parseInt(arrayDB[m]);
+        } else {
+            singleResult = parseInt(arrayDB[m]) - parseInt(arrayNewUser[m]);
+        }
+        totalResult = totalResult + singleResult;      
     }
+    return totalResult;
 }
 
 module.exports = function (app) {
@@ -15,18 +20,19 @@ module.exports = function (app) {
     });
     app.post('/api/friends', function(req, res) {
         var newUser = req.body;
-        friendsData.push(newUser);
-        var dbAnswerArray = [];
-        var newUserAnswerArray = [];
-        for (var k=0; k < newUser.scores.length; k++) {
-            newUserAnswerArray[k] = parseInt(newUser.scores[k]);
+        console.log("req.body " + req.body);
+        var matchResults = [];
+
+        for (var i = 0; i < friendsData.length; i++) {
+            matchResults.push(calculateMatch(friendsData[i].scores, newUser.scores));        
         }
-        for (var i = 0; i < friendsData -1; i++) {
-            for (var j = 0; j < friendsData[i].scores.length; j++) {
-                dbAnswerArray[j] = parseInt(friendsData[i].scores[j]);
+        var smallestDiff = 51;
+        for (var j = 0; j < matchResults.length; j++) {
+            if (matchResults[j] < smallestDiff) {
+                smallestDiff = matchResults[j];
             }
-            
         }
-        res.json(newUser);
+        var index = matchResults.indexOf(smallestDiff);
+        res.json(friendsData[index]);
     });
 }
