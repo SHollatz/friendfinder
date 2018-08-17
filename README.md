@@ -4,7 +4,7 @@ The app will then display the name and picture of the user with the best overall
 Currently, all users are imaginitive until a database is added.
 
 # How to use Friend Finder
-After cloning the repository, start the server by running 'node server.js' in your CLI.
+After cloning the repository, and installing all dependent npm packages, start the server by running 'node server.js' in your CLI.
 Open 'localhost:8080' in your browser and click on "Go to Survey". After submitting your answers
 to all questions, your best match will be displayed.
 
